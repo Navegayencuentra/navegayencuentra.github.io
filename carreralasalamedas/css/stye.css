@@ -166,7 +166,7 @@ h2 {
 img {
   width: auto;
   max-width: 100%;
-  height: auto !important; }
+  height: auto; }
 
 header {
   padding: 0.5em; }
@@ -180,18 +180,85 @@ header {
     overflow: hidden;
     text-indent: -3000px; }
 
+footer {
+  background: #333;
+  min-height: 50px;
+  padding: 1em;
+  color: white; }
+
 .content {
   width: 100%;
   margin: auto; }
 
 .carrera-hero {
-  padding: 1em;
-  background: #E65100;
+  padding: 4em 1em;
+  background: #E65100 no-repeat 0 0;
+  background-image: url(../img/sun-run.jpg);
+  background-size: cover;
   color: white;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
+  .carrera-hero .logo, .carrera-hero .hero {
+    position: relative; }
   .carrera-hero h2 {
     font-family: "Copperplate Gothic";
-    font-size: 3em; }
+    font-size: 6em;
+    font-weight: 500;
+    margin: 0; }
+
+.valores {
+  background: #E65100;
+  color: white;
+  padding: 1em;
+  text-align: center; }
+  .valores h2, .valores p {
+    max-width: 800px;
+    margin: 1em auto; }
+  .valores p {
+    font-size: 1.5em; }
+
+.greatwall {
+  background: #333 no-repeat;
+  background-image: url(../img/greatwall.jpg);
+  background-size: cover;
+  border: 1px solid #333;
+  position: relative;
+  text-align: center;
+  margin: 0;
+  overflow: hidden; }
+  .greatwall div.gw-logo {
+    font-size: 1.5em;
+    font-family: "Kaushan Script";
+    position: relative;
+    background: white;
+    padding: 1em;
+    position: relative; }
+    .greatwall div.gw-logo:before {
+      content: " ";
+      top: 0;
+      left: 100%;
+      position: absolute;
+      border-width: 560px 5em 0px 0px;
+      border-color: white transparent;
+      border-style: solid;
+      width: 0;
+      height: 0; }
+    .greatwall div.gw-logo p {
+      margin: 0.3em; }
+  .greatwall div.gw-hero {
+    padding-left: 5m;
+    position: relative;
+    color: #fff; }
+    .greatwall div.gw-hero h2 {
+      font-size: 3em; }
+      .greatwall div.gw-hero h2 span {
+        color: #D2FF4D;
+        display: inline-block;
+        border-top: 5px #D2FF4D solid;
+        border-bottom: 5px #D2FF4D solid;
+        padding: 0.1em;
+        margin: 0.1em;
+        font-size: 2em; }
 
 .contacto {
   background: #333;
@@ -223,8 +290,27 @@ header {
         position: absolute;
         top: .6em; }
 
-footer {
-  background: #333;
-  min-height: 80px; }
+.pantalla {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+.imagenes-p li {
+  padding: 1em;
+  /*
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+  filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+  @include transition-property(transform);
+  @include transition-duration(1.0s);
+  @include transition-timing-function(ease-in);
+  @include transition-delay(0.5s)*/ }
+  .imagenes-p li:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%); }
 
 /*# sourceMappingURL=stye.css.map */
