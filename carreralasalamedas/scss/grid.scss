@@ -188,3 +188,9 @@
 .pure-u-23-24 {
     width: 95.8333%;
 }
+
+@media (max-width:800px) {
+    .pure-g div{
+        width: 100%;        
+    }
+}

@@ -153,6 +153,9 @@
 .pure-u-23-24 {
   width: 95.8333%; }
 
+@media (max-width: 800px) {
+  .pure-g div {
+    width: 100%; } }
 body {
   margin: 0;
   font-family: "Lato";
@@ -242,7 +245,8 @@ footer {
       border-color: white transparent;
       border-style: solid;
       width: 0;
-      height: 0; }
+      height: 0;
+      -moz-transform: scale(0.9999); }
     .greatwall div.gw-logo p {
       margin: 0.3em; }
   .greatwall div.gw-hero {
@@ -262,21 +266,25 @@ footer {
 
 .contacto {
   background: #333;
-  color: white; }
+  color: white;
+  padding: 2em 0; }
   .contacto div {
     padding: 1em; }
 
 .contacto-datos ul {
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto; }
   .contacto-datos ul li {
     font-weight: 700; }
     .contacto-datos ul li li {
+      display: inline-block;
       height: 24px;
       font-weight: 400;
       line-height: 24px;
       margin-left: 30px;
-      padding: 0.6em 0;
+      padding: 0.6em  0.8em 0.8em 0;
       position: relative; }
       .contacto-datos ul li li:before {
         background: white;
@@ -289,6 +297,9 @@ footer {
         width: 24px;
         position: absolute;
         top: .6em; }
+
+.patrocinadores {
+  text-align: center; }
 
 .pantalla {
   position: absolute;
@@ -312,5 +323,9 @@ footer {
   .imagenes-p li:hover {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%); }
+
+@media (max-width: 800px) {
+  .contacto-datos {
+    text-align: center; } }
 
 /*# sourceMappingURL=stye.css.map */
