@@ -51,6 +51,30 @@ header{
         
     }
 }
+
+nav{
+    ul{
+        word-spacing: -0.43em;
+        li{
+            text-align:left;
+            display: inline-block;
+            zoom: 1; *display: inline; /* IE < 8: fake inline-block */
+            letter-spacing: normal;
+            word-spacing: normal;
+            vertical-align: top;
+            text-rendering: auto;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box; 
+            padding: 1em;
+            text-transform: uppercase;
+            a{
+                text-decoration: none;
+                color:#333;
+            }
+        }
+    }
+}
 footer{
     background: #333;
     min-height: 50px;
@@ -66,8 +90,9 @@ footer{
 .carrera-hero{
     padding: 4em 1em;
     background:#E65100 no-repeat 0 0;
-    background-image: url(../img/sun-run.jpg);
+    background-image: url(../img/sunrun.jpg);
     background-size: cover;
+    background-position:0 100%;
     color: white;
     text-align: center;
     position: relative;
@@ -75,13 +100,42 @@ footer{
         position: relative;
     }
     h2{
-        font-family: "Copperplate Gothic";
+        font-family: "lato";
         font-size:6em;
-        font-weight:500;
+        line-height: 90px;  
         margin: 0;
+        text-transform: uppercase;
+        span{
+            background:$primary;
+            color: white;
+            display: inline block;
+            padding: 0 0.5em;
+            font-weight:700;
+            font-size: 0.4em;
+        }
+    }
+    p{
+        font-weight:300;
+        font-size: 2em;
+        margin: .3em;
     }
 }
-
+.carrera-datos{
+    padding: 1em 0.5em;
+    .info{
+        padding:.5em;
+    }
+    .jd{
+        text-align: center;
+        h2{
+            font-family:"Kaushan Script";
+            color: #000033;
+        }
+        img{
+            max-height: 200px
+        }
+    }
+}
 .valores{
     background: $primary;
     color: white;
@@ -165,6 +219,9 @@ footer{
         margin: 0 auto;
     li{
         font-weight: 700;
+        .icon-facebook:before{
+            content: "";    
+        }
         li{
             display: inline-block;
             height: 24px;
@@ -206,17 +263,14 @@ footer{
 .imagenes-p{
     li{
         padding:1em;
-        /*
         -webkit-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
         filter: grayscale(100%);
-        filter: gray;
-        filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
-        @include transition-property(transform);
-        @include transition-duration(1.0s);
-        @include transition-timing-function(ease-in);
-        @include transition-delay(0.5s)*/
         &:hover{        
-            -webkit-filter: grayscale(0%); 
+            -webkit-filter: grayscale(0%);             
+            -ms-filter: grayscale(0%); 
+            -moz-filter: grayscale(0%); 
             filter: grayscale(0%); 
         }
     }

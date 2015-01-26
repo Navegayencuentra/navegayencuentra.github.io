@@ -12,8 +12,7 @@
    The ".opera-only" selector is used to prevent actual prefocus styling
    and is not required in markup.
 */
-.opera-only :-o-prefocus,
-.pure-g {
+.opera-only :-o-prefocus, .pure-g {
   word-spacing: -0.43em; }
 
 .pure-u {
@@ -29,34 +28,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.pure-u-1,
-.pure-u-1-2,
-.pure-u-1-3,
-.pure-u-2-3,
-.pure-u-1-4,
-.pure-u-3-4,
-.pure-u-1-5,
-.pure-u-2-5,
-.pure-u-3-5,
-.pure-u-4-5,
-.pure-u-1-6,
-.pure-u-5-6,
-.pure-u-1-8,
-.pure-u-3-8,
-.pure-u-5-8,
-.pure-u-7-8,
-.pure-u-1-12,
-.pure-u-5-12,
-.pure-u-7-12,
-.pure-u-11-12,
-.pure-u-1-24,
-.pure-u-5-24,
-.pure-u-7-24,
-.pure-u-11-24,
-.pure-u-13-24,
-.pure-u-17-24,
-.pure-u-19-24,
-.pure-u-23-24 {
+.pure-u-1, .pure-u-1-2, .pure-u-1-3, .pure-u-2-3, .pure-u-1-4, .pure-u-3-4, .pure-u-1-5, .pure-u-2-5, .pure-u-3-5, .pure-u-4-5, .pure-u-1-6, .pure-u-5-6, .pure-u-1-8, .pure-u-3-8, .pure-u-5-8, .pure-u-7-8, .pure-u-1-12, .pure-u-5-12, .pure-u-7-12, .pure-u-11-12, .pure-u-1-24, .pure-u-5-24, .pure-u-7-24, .pure-u-11-24, .pure-u-13-24, .pure-u-17-24, .pure-u-19-24, .pure-u-23-24 {
   display: inline-block;
   zoom: 1;
   *display: inline;
@@ -173,15 +145,36 @@ img {
 
 header {
   padding: 0.5em; }
-  header h1.logo-white {
-    margin: 0;
-    display: inline-block;
-    min-height: 78px;
-    min-width: 300px;
-    background: url(../img/logo-carrerawhite.png) no-repeat;
-    background-size: contain;
-    overflow: hidden;
-    text-indent: -3000px; }
+header h1.logo-white {
+  margin: 0;
+  display: inline-block;
+  min-height: 78px;
+  min-width: 300px;
+  background: url(../img/logo-carrerawhite.png) no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  text-indent: -3000px; }
+
+nav ul {
+  word-spacing: -0.43em; }
+nav ul li {
+  text-align: left;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  /* IE < 8: fake inline-block */
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em;
+  text-transform: uppercase; }
+nav ul li a {
+  text-decoration: none;
+  color: #333; }
 
 footer {
   background: #333;
@@ -196,29 +189,54 @@ footer {
 .carrera-hero {
   padding: 4em 1em;
   background: #E65100 no-repeat 0 0;
-  background-image: url(../img/sun-run.jpg);
+  background-image: url(../img/sunrun.jpg);
   background-size: cover;
+  background-position: 0 100%;
   color: white;
   text-align: center;
   position: relative; }
-  .carrera-hero .logo, .carrera-hero .hero {
-    position: relative; }
-  .carrera-hero h2 {
-    font-family: "Copperplate Gothic";
-    font-size: 6em;
-    font-weight: 500;
-    margin: 0; }
+.carrera-hero .logo, .carrera-hero .hero {
+  position: relative; }
+.carrera-hero h2 {
+  font-family: "lato";
+  font-size: 6em;
+  line-height: 90px;
+  margin: 0;
+  text-transform: uppercase; }
+.carrera-hero h2 span {
+  background: #E65100;
+  color: white;
+  display: inline block;
+  padding: 0 0.5em;
+  font-weight: 700;
+  font-size: 0.4em; }
+.carrera-hero p {
+  font-weight: 300;
+  font-size: 2em;
+  margin: .3em; }
+
+.carrera-datos {
+  padding: 1em 0.5em; }
+.carrera-datos .info {
+  padding: .5em; }
+.carrera-datos .jd {
+  text-align: center; }
+.carrera-datos .jd h2 {
+  font-family: "Kaushan Script";
+  color: #000033; }
+.carrera-datos .jd img {
+  max-height: 200px; }
 
 .valores {
   background: #E65100;
   color: white;
   padding: 1em;
   text-align: center; }
-  .valores h2, .valores p {
-    max-width: 800px;
-    margin: 1em auto; }
-  .valores p {
-    font-size: 1.5em; }
+.valores h2, .valores p {
+  max-width: 800px;
+  margin: 1em auto; }
+.valores p {
+  font-size: 1.5em; }
 
 .greatwall {
   background: #333 no-repeat;
@@ -229,74 +247,76 @@ footer {
   text-align: center;
   margin: 0;
   overflow: hidden; }
-  .greatwall div.gw-logo {
-    font-size: 1.5em;
-    font-family: "Kaushan Script";
-    position: relative;
-    background: white;
-    padding: 1em;
-    position: relative; }
-    .greatwall div.gw-logo:before {
-      content: " ";
-      top: 0;
-      left: 100%;
-      position: absolute;
-      border-width: 560px 5em 0px 0px;
-      border-color: white transparent;
-      border-style: solid;
-      width: 0;
-      height: 0;
-      -moz-transform: scale(0.9999); }
-    .greatwall div.gw-logo p {
-      margin: 0.3em; }
-  .greatwall div.gw-hero {
-    padding-left: 5m;
-    position: relative;
-    color: #fff; }
-    .greatwall div.gw-hero h2 {
-      font-size: 3em; }
-      .greatwall div.gw-hero h2 span {
-        color: #D2FF4D;
-        display: inline-block;
-        border-top: 5px #D2FF4D solid;
-        border-bottom: 5px #D2FF4D solid;
-        padding: 0.1em;
-        margin: 0.1em;
-        font-size: 2em; }
+.greatwall div.gw-logo {
+  font-size: 1.5em;
+  font-family: "Kaushan Script";
+  position: relative;
+  background: white;
+  padding: 1em;
+  position: relative; }
+.greatwall div.gw-logo:before {
+  content: " ";
+  top: 0;
+  left: 100%;
+  position: absolute;
+  border-width: 560px 5em 0px 0px;
+  border-color: white transparent;
+  border-style: solid;
+  width: 0;
+  height: 0;
+  -moz-transform: scale(0.9999); }
+.greatwall div.gw-logo p {
+  margin: 0.3em; }
+.greatwall div.gw-hero {
+  padding-left: 5m;
+  position: relative;
+  color: #fff; }
+.greatwall div.gw-hero h2 {
+  font-size: 3em; }
+.greatwall div.gw-hero h2 span {
+  color: #D2FF4D;
+  display: inline-block;
+  border-top: 5px #D2FF4D solid;
+  border-bottom: 5px #D2FF4D solid;
+  padding: 0.1em;
+  margin: 0.1em;
+  font-size: 2em; }
 
 .contacto {
   background: #333;
   color: white;
   padding: 2em 0; }
-  .contacto div {
-    padding: 1em; }
+.contacto div {
+  padding: 1em; }
 
 .contacto-datos ul {
   padding: 0;
   list-style: none;
   max-width: 600px;
   margin: 0 auto; }
-  .contacto-datos ul li {
-    font-weight: 700; }
-    .contacto-datos ul li li {
-      display: inline-block;
-      height: 24px;
-      font-weight: 400;
-      line-height: 24px;
-      margin-left: 30px;
-      padding: 0.6em  0.8em 0.8em 0;
-      position: relative; }
-      .contacto-datos ul li li:before {
-        background: white;
-        border-radius: 50%;
-        color: #333;
-        left: -30px;
-        line-height: 24px;
-        text-align: center;
-        height: 24px;
-        width: 24px;
-        position: absolute;
-        top: .6em; }
+.contacto-datos ul li {
+  font-weight: 700; }
+.contacto-datos ul li .icon-facebook:before {
+  content: ""; }
+.contacto-datos ul li li {
+  display: inline-block;
+  height: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-left: 30px;
+  padding: 0.6em  0.8em 0.8em 0;
+  position: relative; }
+.contacto-datos ul li li:before {
+  background: white;
+  border-radius: 50%;
+  color: #333;
+  left: -30px;
+  line-height: 24px;
+  text-align: center;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: .6em; }
 
 .patrocinadores {
   text-align: center; }
@@ -311,18 +331,15 @@ footer {
 
 .imagenes-p li {
   padding: 1em;
-  /*
   -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  filter: gray;
-  filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
-  @include transition-property(transform);
-  @include transition-duration(1.0s);
-  @include transition-timing-function(ease-in);
-  @include transition-delay(0.5s)*/ }
-  .imagenes-p li:hover {
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%); }
+  -ms-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%); }
+.imagenes-p li:hover {
+  -webkit-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%); }
 
 @media (max-width: 800px) {
   .contacto-datos {
