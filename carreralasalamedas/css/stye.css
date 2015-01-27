@@ -156,9 +156,9 @@ header h1.logo-white {
   text-indent: -3000px; }
 
 nav ul {
-  word-spacing: -0.43em; }
+  word-spacing: -0.43em;
+  text-align: right; }
 nav ul li {
-  text-align: left;
   display: inline-block;
   zoom: 1;
   *display: inline;
@@ -174,7 +174,10 @@ nav ul li {
   text-transform: uppercase; }
 nav ul li a {
   text-decoration: none;
-  color: #333; }
+  color: #333;
+  margin-bottom: 0.5em; }
+nav ul li a:hover {
+  border-bottom: 1px solid #333; }
 
 footer {
   background: #333;

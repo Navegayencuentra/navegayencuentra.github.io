@@ -55,8 +55,8 @@ header{
 nav{
     ul{
         word-spacing: -0.43em;
+        text-align: right;
         li{
-            text-align:left;
             display: inline-block;
             zoom: 1; *display: inline; /* IE < 8: fake inline-block */
             letter-spacing: normal;
@@ -71,6 +71,10 @@ nav{
             a{
                 text-decoration: none;
                 color:#333;
+                margin-bottom: 0.5em;
+                &:hover{
+                    border-bottom: 1px solid #333;
+                }
             }
         }
     }
