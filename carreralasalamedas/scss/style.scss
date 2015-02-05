@@ -1,3 +1,4 @@
+// web/navegayencuentra.github.io/carreralasalamedas
 
 // grid variables
 $grid-columns: 12;
@@ -6,6 +7,8 @@ $grid-max-width: 65em;
 //color variables
 
 $primary:#E65100;
+$secondary:#2E486D;
+$back: #f5f4f1;
 $green:#D2FF4D;
 
 // breakpoints
@@ -17,6 +20,7 @@ $breakpoint-medium: "only screen and (min-width: 30em)";
 
 
 body{
+    background:$back;
     margin: 0;
     font-family:"Lato";
     font-weight:400;  
@@ -29,6 +33,11 @@ h2{
     text-align: center;
 }
 
+h3{
+    text-align: center;
+    font-weight: 300;
+}
+
 //we aure any image be responsive
 img {
     width: auto;
@@ -37,6 +46,7 @@ img {
 }
 
 header{
+    background: white;
     padding: 0.5em;
         
     h1.logo-white{
@@ -52,10 +62,27 @@ header{
     }
 }
 
+.nav-on{
+        position: fixed;
+        top:0;
+        left: 0;
+        z-index: 999;
+}
+
+.nav-container{
+    height: 68px;
+}
+
 nav{
+    padding: 1px 0;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 0.2em 1em 0 rgba(0,0,0,0.5);
+    background: white;
+    width: 100%;
     ul{
+        margin: 0;
         word-spacing: -0.43em;
-        text-align: right;
+        text-align:center;
         li{
             display: inline-block;
             zoom: 1; *display: inline; /* IE < 8: fake inline-block */
@@ -79,6 +106,7 @@ nav{
         }
     }
 }
+
 footer{
     background: #333;
     min-height: 50px;
@@ -124,6 +152,7 @@ footer{
         margin: .3em;
     }
 }
+
 .carrera-datos{
     padding: 1em 0.5em;
     .info{
@@ -140,6 +169,13 @@ footer{
         }
     }
 }
+
+.inscripcion{
+    color: white;
+    padding:1em 0;
+    background:$secondary;
+}
+
 .valores{
     background: $primary;
     color: white;
@@ -215,6 +251,42 @@ footer{
     }
 }
 
+.contacto-form{
+    form{
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    label{
+        text-align: center;
+        display: block;
+        max-width: 300px;
+
+    }
+    input,textarea{
+        
+        display: block;
+        color: #333;
+        margin: 1em 0;
+        padding: 0.5em 0.2em;
+        width:100%;
+        max-width: 300px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    }
+    
+    input[type="submit"]{
+        background:#333;
+        color:#fff;
+        width:100%;
+        max-width: 300px;
+        
+    }
+    textarea{
+        min-height: 120px;
+    }
+}
+
 .contacto-datos{
     ul{
         padding: 0;
@@ -252,6 +324,8 @@ footer{
 }
 
 .patrocinadores{
+    padding: 1px 0;
+    background: white;
     text-align: center;
 }
 
@@ -280,9 +354,52 @@ footer{
     }
 }
 
+.button{
+    color: white;
+    background:$primary;
+    border-radius: 0.3em;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 1em;
+    width: 200px;
+    text-decoration: none;
+    @include transition(background .4s ease-in-out);    
+    @include transition(color .4s ease-in-out);
+
+    &:hover{
+     background:lighten(#E65100, 15);   
+    }
+    
+    &.btninscripcion{
+        background:$secondary;
+        border: 1px solid white;
+        &:hover{
+            background: white;
+            color:$secondary;
+        }
+    }
+}
+
+
 
 @media (max-width:800px) {
     .contacto-datos{
         text-align: center;
+    }
+    .carrera-hero{
+        h2{
+            font-size:4em;
+        }
+    }
+}
+@media (max-width:480px) {
+        nav{
+            display: none;
+        }
+        .carrera-hero{
+        h2{
+            font-size:3em;
+        }
     }
 }
