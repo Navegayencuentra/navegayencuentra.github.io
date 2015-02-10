@@ -193,15 +193,26 @@ img {
 header {
   background: white;
   padding: 0.5em; }
-  header h1.logo-white {
-    margin: 0;
-    display: inline-block;
-    min-height: 78px;
-    min-width: 300px;
-    background: url(../img/logo-carrerawhite.png) no-repeat;
-    background-size: contain;
-    overflow: hidden;
-    text-indent: -3000px; }
+  header .organizadores {
+    text-align: right;
+    display: inline-block; }
+
+.logo-white, .logo-ajua {
+  margin: 0;
+  display: inline-block;
+  min-height: 78px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  text-indent: -3000px; }
+
+.logo-white {
+  min-width: 300px;
+  background-image: url(../img/logo-carrerawhite.png); }
+
+.logo-ajua {
+  background-image: url(../img/ajua.png);
+  min-width: 120px; }
 
 .nav-on {
   position: fixed;
@@ -472,6 +483,10 @@ footer {
   .carrera-hero h2 {
     font-size: 4em; } }
 @media (max-width: 480px) {
+  .logo-ajua, .logo-white {
+    display: block;
+    margin: 0 auto; }
+
   nav {
     display: none; }
 
