@@ -310,6 +310,19 @@ footer {
   padding: 1em 0;
   background: #2E486D; }
 
+.sedes {
+  background: #fff; }
+  .sedes .sbox {
+    padding: 1em; }
+    .sedes .sbox img {
+      display: block;
+      max-height: 100px;
+      max-width: 100%;
+      margin: 0 auto; }
+    .sedes .sbox h3 {
+      text-align: left;
+      font-weight: 700; }
+
 .valores {
   background: #E65100;
   color: white;

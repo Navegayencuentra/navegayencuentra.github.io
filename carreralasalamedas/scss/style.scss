@@ -199,6 +199,23 @@ footer{
     background:$secondary;
 }
 
+.sedes{
+    background: #fff;
+    .sbox{
+        img{
+            display: block;
+            max-height: 100px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        padding: 1em;
+        h3{
+            text-align: left;
+            font-weight:700;
+        }
+    }
+}
+
 .valores{
     background: $primary;
     color: white;
