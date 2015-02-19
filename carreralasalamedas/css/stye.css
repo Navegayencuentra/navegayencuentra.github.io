@@ -171,7 +171,6 @@
   .pure-u-1-8 {
     width: 30%; } }
 body {
-  background: #f5f4f1;
   margin: 0;
   font-family: "Lato";
   font-weight: 400; }
@@ -304,6 +303,14 @@ footer {
       color: #000033; }
     .carrera-datos .jd img {
       max-height: 200px; }
+
+.mapa {
+  display: block;
+  width: 100%;
+  border: 1px solid #333;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 1em; }
 
 .inscripcion {
   color: white;
